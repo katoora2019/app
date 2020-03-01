@@ -1,0 +1,18 @@
+<h1>welcome to our show page</h1>
+<h1>Students#show</h1>
+<p>Find me in app/views/students/show.html.erb</p>
+<h1><%=@course.name%>page<h2>
+<h2>Age: <%=@course.age%></h2>
+<h2>Courses</h2>
+<%= button_to "Register Course", new_enrollment_path, method: :get%>
+<%= button_to "@student.enrollment", new_enrollment_path, method: :get%>
+<ul>
+<%@student.enrollments.each do |enrollment|%>
+<li><%= enrollment.course.name%></li>
+<%= button_to "Drop Enrollment", enrollment_path(enroll),method: delete %>
+<%end%>
+</ul>
+
+<%= button_to "Edit student", edit_student_path, method: :get%>
+<%= button_to "Destroy student", student_path, method: :delete%>
+<%= link_to "Destroy student", student_path%>

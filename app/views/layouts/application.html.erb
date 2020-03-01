@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Course App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+ 
+    <%= javascript_pack_tag 'application' %>
+
+  </head>
+
+  <body>
+
+  <nav>
+  <ul class="main-navigation">
+  <li class="menu-item"><%= link_to 'Welcome', root_path %></li>
+  <li class="menu-item"><%= link_to 'Students', students_path %></li>
+  <li class="menu-item"><%= link_to 'Courses', courses_path %></li>
+  <li class="menu-item"><%= link_to 'Enrollments', enrollments_path %></li>
+  <li class="menu-item"><%= link_to 'new student',new_student_path %></li>
+  <li class="menu-item"><%= link_to 'text', new_student_path %></li>
+  </ul>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>

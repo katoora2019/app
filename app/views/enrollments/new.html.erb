@@ -1,0 +1,13 @@
+<h1>Enrollments#new</h1>
+<p>Find me in app/views/enrollments/new.html.erb</p>
+
+<div class="form">
+<%= form_with(model: @question, local: true) do |f|%>
+<%= f.label :course_id%>
+<%= f.collection_select :course_id, Course.all, :id, :name%>
+<%= f.label :name%>
+<%= f.collection_select :course_id, Course.all, :id, :name%>
+
+<%= f.submit "Create Course", class: "menu-item"%>
+<%end%>
+</<i class="fas fa-divide  "></i>

@@ -1,0 +1,11 @@
+<h1>Students#show</h1>
+<ul>
+<%@student.enrollments.each do |enrollment|%>
+<li><%= enrollment.course.name%></li>
+<%= button_to "Drop Enrollment", enrollment_path(enroll),method: delete %>
+<%end%>
+</ul>
+
+<%= button_to "Edit student", edit_student_path, method: :get%>
+<%= button_to "Destroy student", student_path, method: :delete%>
+<%= link_to "Destroy student", student_path%>
